@@ -12,6 +12,10 @@
 #import "Runner.h"
 #import "Swimmer.h"
 #import "Judoka.h"
+#import "Animal.h"
+#import "Dog.h"
+#import "Cat.h"
+#import "Fox.h"
 
 @interface AppDelegate ()
 
@@ -65,22 +69,49 @@
     judoka.height = 1.63;
     judoka.gender = 0;
     
-    NSArray* array = [[NSArray alloc] initWithObjects:human, cyclist, runner, swimmer, judoka, nil];
+    Animal* animal = [[Animal alloc] init];
+    animal.name = @"Bonya";
+    animal.age = 7;
+    animal.species = @"Raccoon";
+    animal.color = @"White-grey";
     
-    // MAKR: level pupil
-//    for (Human* object in array) {
-//        NSLog(@"name is %@", object.name);
-//        NSLog(@"weight is %f",object.weight);
-//        NSLog(@"height is %f",object.height);
-//        NSLog(@"gender is %d", object.gender);
-//
-//        [object move];
-//    }
+    Dog* dog = [[Dog alloc] init];
+    dog.name = @"Baks";
+    dog.age = 6;
+    dog.species = @"Labrador";
+    dog.color = @"Black";
     
+    Cat* cat = [[Cat alloc] init];
+    cat.name = @"Dusya";
+    cat.age = 13;
+    cat.species = @"Munchkin";
+    cat.color = @"light grey";
+    
+    Fox* fox = [[Fox alloc] init];
+    fox.name = @"Alisa";
+    fox.age = 8;
+    fox.species = @"Corsac";
+    fox.color = @"Orange-white";
+    
+    NSArray* arrayOfSportsmens = [[NSArray alloc] initWithObjects:human, cyclist, runner, swimmer, judoka, nil];
+    
+/*
+    NSLog(@"level pupil");
+    // MARK: level pupil
+    for (Human* object in arrayOfSportsmens) {
+        NSLog(@"name is %@", object.name);
+        NSLog(@"weight is %f",object.weight);
+        NSLog(@"height is %f",object.height);
+        NSLog(@"gender is %d", object.gender);
+
+        [object move];
+    }
+    
+     NSLog(@"level student");
     // MARK: level student
-    for (int i = [array count] - 1; i >= 0; i --) {
+    for (int i = [arrayOfSportsmens count] - 1; i >= 0; i --) {
         
-        Human* object = [array objectAtIndex:i];
+        Human* object = [arrayOfSportsmens objectAtIndex:i];
         
         NSLog(@"objectAtIndex is %d", i);
         
@@ -94,9 +125,51 @@
             [object toDefineSportsCategory];
             [object superMove];
         }
-        
         [object move];
     }
+*/
+    NSLog(@"level master");
+    //MARK: level master
+    NSArray* array = [[NSArray alloc] initWithObjects: human, cyclist, runner, swimmer, judoka, animal, dog, cat, fox, nil];
+    
+    for (int i = 0; i < [array count]; i++) {
+        
+        Human* objectHuman = [array objectAtIndex:i];
+        Animal* objectAnimal = [array objectAtIndex:i];
+        
+        if([objectAnimal isKindOfClass: [Animal class]]) {
+            NSLog(@"type of object is animal");
+            NSLog(@"name of animal is %@", objectAnimal.name);
+            NSLog(@"age of animal is %d", objectAnimal.age);
+            NSLog(@"color of animal is %@", objectAnimal.color);
+            NSLog(@"species of animal is %@", objectAnimal.species);
+            [objectAnimal move];
+        } else {
+            NSLog(@"type of object is human");
+            NSLog(@"name of human is %@", objectHuman.name);
+            NSLog(@"weight of human is %f",objectHuman.weight);
+            NSLog(@"height of human is %f",objectHuman.height);
+            NSLog(@"gender of human is %d", objectHuman.gender);
+            [objectHuman move];
+        }
+    }
+    
+    NSLog(@"level star");
+    //MARK: level star
+    
+    NSArray* arrayOfAnimals = [[NSArray alloc] initWithObjects: animal, dog, cat, fox, nil];
+    
+    /*
+     В одном цикле выводить сначала человека а потом животное, доставая данные поочередно из двух разных массивов, если в одном из массивов объектов больше, то в конце должны выводиться только объекты этого массива (так как других уже нет)
+     */
+    
+    for(int i = 0; i < ([arrayOfAnimals count] + [arrayOfSportsmens count]); i++) {
+        Human* objectHuman = [array objectAtIndex:i];
+        Animal* objectAnimal = [array objectAtIndex:i];
+        NSLog(@"name of animal is %@", objectAnimal.name);
+        NSLog(@"name of human is %@", objectHuman.name);
+    }
+    
 
     return YES;
 }

@@ -16,6 +16,10 @@
 		5D0B58F6243613EA00203EEF /* Runner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B58F5243613EA00203EEF /* Runner.m */; };
 		5D0B58FA243613FF00203EEF /* Swimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B58F9243613FF00203EEF /* Swimmer.m */; };
 		5D0B58FD2436213800203EEF /* Judoka.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B58FC2436213800203EEF /* Judoka.m */; };
+		5D8DC9632439DF8F00264FA4 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DC9622439DF8F00264FA4 /* Animal.m */; };
+		5D8DC9662439E1C400264FA4 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DC9652439E1C400264FA4 /* Dog.m */; };
+		5D8DC9692439E1CF00264FA4 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DC9682439E1CF00264FA4 /* Cat.m */; };
+		5D8DC96C2439E1DD00264FA4 /* Fox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DC96B2439E1DD00264FA4 /* Fox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,14 @@
 		5D0B58F9243613FF00203EEF /* Swimmer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swimmer.m; sourceTree = "<group>"; };
 		5D0B58FB2436213800203EEF /* Judoka.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Judoka.h; sourceTree = "<group>"; };
 		5D0B58FC2436213800203EEF /* Judoka.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Judoka.m; sourceTree = "<group>"; };
+		5D8DC9612439DF8F00264FA4 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		5D8DC9622439DF8F00264FA4 /* Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		5D8DC9642439E1C400264FA4 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		5D8DC9652439E1C400264FA4 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		5D8DC9672439E1CF00264FA4 /* Cat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		5D8DC9682439E1CF00264FA4 /* Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
+		5D8DC96A2439E1DD00264FA4 /* Fox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fox.h; sourceTree = "<group>"; };
+		5D8DC96B2439E1DD00264FA4 /* Fox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,14 @@
 				5D0B58F9243613FF00203EEF /* Swimmer.m */,
 				5D0B58FB2436213800203EEF /* Judoka.h */,
 				5D0B58FC2436213800203EEF /* Judoka.m */,
+				5D8DC9612439DF8F00264FA4 /* Animal.h */,
+				5D8DC9622439DF8F00264FA4 /* Animal.m */,
+				5D8DC9642439E1C400264FA4 /* Dog.h */,
+				5D8DC9652439E1C400264FA4 /* Dog.m */,
+				5D8DC9672439E1CF00264FA4 /* Cat.h */,
+				5D8DC9682439E1CF00264FA4 /* Cat.m */,
+				5D8DC96A2439E1DD00264FA4 /* Fox.h */,
+				5D8DC96B2439E1DD00264FA4 /* Fox.m */,
 				5D0B58E12436125B00203EEF /* Assets.xcassets */,
 				5D0B58E32436125B00203EEF /* LaunchScreen.storyboard */,
 				5D0B58E62436125B00203EEF /* Info.plist */,
@@ -157,11 +177,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8DC96C2439E1DD00264FA4 /* Fox.m in Sources */,
+				5D8DC9662439E1C400264FA4 /* Dog.m in Sources */,
 				5D0B58F02436126D00203EEF /* Human.m in Sources */,
 				5D0B58E82436125B00203EEF /* main.m in Sources */,
 				5D0B58FA243613FF00203EEF /* Swimmer.m in Sources */,
+				5D8DC9692439E1CF00264FA4 /* Cat.m in Sources */,
 				5D0B58E02436125800203EEF /* AppDelegate.m in Sources */,
 				5D0B58F3243613DD00203EEF /* Cyclist.m in Sources */,
+				5D8DC9632439DF8F00264FA4 /* Animal.m in Sources */,
 				5D0B58FD2436213800203EEF /* Judoka.m in Sources */,
 				5D0B58F6243613EA00203EEF /* Runner.m in Sources */,
 			);
