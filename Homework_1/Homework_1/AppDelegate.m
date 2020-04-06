@@ -127,11 +127,13 @@
         }
         [object move];
     }
-*/
+
     NSLog(@"level master");
     //MARK: level master
+ 
+*/
     NSArray* array = [[NSArray alloc] initWithObjects: human, cyclist, runner, swimmer, judoka, animal, dog, cat, fox, nil];
-    
+/*
     for (int i = 0; i < [array count]; i++) {
         
         Human* objectHuman = [array objectAtIndex:i];
@@ -153,24 +155,30 @@
             [objectHuman move];
         }
     }
-    
+*/
     NSLog(@"level star");
     //MARK: level star
     
     NSArray* arrayOfAnimals = [[NSArray alloc] initWithObjects: animal, dog, cat, fox, nil];
-    
-    /*
-     В одном цикле выводить сначала человека а потом животное, доставая данные поочередно из двух разных массивов, если в одном из массивов объектов больше, то в конце должны выводиться только объекты этого массива (так как других уже нет)
-     */
-    
-    for(int i = 0; i < ([arrayOfAnimals count] + [arrayOfSportsmens count]); i++) {
-        Human* objectHuman = [array objectAtIndex:i];
-        Animal* objectAnimal = [array objectAtIndex:i];
-        NSLog(@"name of animal is %@", objectAnimal.name);
-        NSLog(@"name of human is %@", objectHuman.name);
-    }
-    
+    NSInteger maxCount;
 
+        if ([arrayOfSportsmens count]  > [arrayOfAnimals count]) {
+            maxCount = [arrayOfSportsmens count];
+        } else {
+            maxCount = [arrayOfAnimals count];
+        }
+        
+        for(int i = 0; i <= maxCount; i++) {
+            if ([arrayOfSportsmens count] > i) {
+                Human* objectHuman = [arrayOfSportsmens objectAtIndex:i];
+                NSLog(@"name of animal is %@", objectHuman.name);
+            }
+            
+            if ([arrayOfAnimals count] > i) {
+                Animal* objectAnimal = [arrayOfAnimals objectAtIndex:i];
+                NSLog(@"name of human is %@", objectAnimal.name);
+            }
+        }
     return YES;
 }
 
