@@ -23,7 +23,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -95,8 +94,7 @@
     
     NSArray* arrayOfSportsmens = [[NSArray alloc] initWithObjects:human, cyclist, runner, swimmer, judoka, nil];
     
-/*
-    NSLog(@"level pupil");
+    NSLog(@"------------level pupil------------");
     // MARK: level pupil
     for (Human* object in arrayOfSportsmens) {
         NSLog(@"name is %@", object.name);
@@ -107,7 +105,7 @@
         [object move];
     }
     
-     NSLog(@"level student");
+     NSLog(@"------------level student------------");
     // MARK: level student
     for (int i = [arrayOfSportsmens count] - 1; i >= 0; i --) {
         
@@ -128,12 +126,10 @@
         [object move];
     }
 
-    NSLog(@"level master");
+    NSLog(@"------------level master------------");
     //MARK: level master
  
-*/
     NSArray* array = [[NSArray alloc] initWithObjects: human, cyclist, runner, swimmer, judoka, animal, dog, cat, fox, nil];
-/*
     for (int i = 0; i < [array count]; i++) {
         
         Human* objectHuman = [array objectAtIndex:i];
@@ -155,8 +151,7 @@
             [objectHuman move];
         }
     }
-*/
-    NSLog(@"level star");
+    NSLog(@"------------level star------------");
     //MARK: level star
     
     NSArray* arrayOfAnimals = [[NSArray alloc] initWithObjects: animal, dog, cat, fox, nil];
