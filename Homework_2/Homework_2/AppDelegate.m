@@ -21,7 +21,23 @@
     self.window.backgroundColor = [UIColor cyanColor];
     self.window.rootViewController = [[UIViewController alloc] init];
     [self.window makeKeyAndVisible];
-
+    
+    NSMutableArray* array;
+    array = [NSMutableArray arrayWithCapacity: 30];
+    
+    CGRect rect;
+    rect = CGRectMake(3, 3, 3, 3);
+    
+    for(int i = 0; i < 30; i++) {
+        CGPoint point = CGPointMake((arc4random()% 10), (arc4random()% 10));
+        [array addObject: NSStringFromCGPoint(point)];
+        NSLog(@"%@", NSStringFromCGPoint(point));
+        
+        if (CGRectContainsPoint(rect, point)) {
+            NSLog(@"Rectangular contains point %@", NSStringFromCGPoint(point));
+        }
+    }
+    
     return YES;
 }
 
